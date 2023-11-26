@@ -3,12 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Loading Types</title>
 </head>
 <body>
-  <div class="container">
+  <div id="container" class="container black-bg">
+    <div class="actions">
+      <button onclick="setWhiteBg()">White BG</button>
+      <button onclick="setBlackBg()">Black BG</button>
+    </div>
+
     <div class="loading"></div>
   </div>
+
+  <script src="index.js"></script>
 </body>
 </html>
 
@@ -17,14 +24,35 @@
   * {
     margin: 0;
     box-sizing: border-box;
-    background-color: black;
   }
 
   .container {
     display: flex;
+    flex-direction: column;
+    gap: 2rem;
     height: 100vh;
     align-items: center;
     justify-content: center;
+  }
+
+  .black-bg {
+    background-color: black;
+  }
+
+  .white-bg {
+    background-color: white;
+  }
+
+  .actions {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .actions button {
+    width: 5rem;
+    height: 5rem;
+    border: 2px solid #ff5500;
+    border-radius: 25%;
   }
 
   .loading {
